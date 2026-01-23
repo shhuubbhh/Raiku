@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Why Raiku Exists | Raiku Handbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-mono text-zinc-100 min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('bg.png');">
+
+
+  <!-- Top Navigation -->
+  <header class="border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="text-sm text-zinc-400 hover:text-zinc-200">
+        ← Back to Handbook
+      </a>
+      <span class="text-sm text-zinc-500">Raiku Handbook</span>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-14">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">
+      Why Raiku Exists
+    </h1>
+
+    <p class="text-zinc-400 text-lg mb-10 max-w-3xl">
+      Raiku exists because fast blockchains still suffer from unreliable execution.
+      Speed alone is not enough when execution cannot be guaranteed.
+    </p>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">
+        The Core Problem: Execution Is Uncertain
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        On Solana today, sending a transaction does not guarantee it will execute.
+        Even if a transaction is valid and pays a high fee, it can still be dropped
+        during periods of congestion.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        This creates a system where users must <strong>hope</strong> their transaction
+        lands in a block, rather than knowing it will.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">
+        How Solana Handles Transactions Today
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Solana does not use a traditional mempool. Transactions are sent directly
+        to the current leader, who decides which transactions to include.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Under heavy load, leaders must choose between many competing transactions,
+        and many valid transactions are simply dropped.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">
+        What Goes Wrong Under Congestion
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mt-6">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Dropped Transactions</h3>
+          <p class="text-sm text-zinc-400">
+            Valid transactions never make it into a block during peak demand.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Fee Guessing</h3>
+          <p class="text-sm text-zinc-400">
+            Users raise fees blindly without any execution guarantee.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Spam & Bots</h3>
+          <p class="text-sm text-zinc-400">
+            Bots flood the network because sending more transactions increases odds.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Wasted MEV</h3>
+          <p class="text-sm text-zinc-400">
+            Many MEV attempts revert or fail, burning fees without execution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">
+        Why Paying Higher Fees Doesn’t Fix This
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Priority fees on Solana only increase the probability of inclusion.
+        They do not provide any contractual guarantee that execution will occur.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        This turns execution into a guessing game where everyone overpays,
+        spam increases, and reliability decreases.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">
+        The Hidden Cost: Broken Applications
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Execution uncertainty limits what can be built on-chain.
+        Applications that require precise timing or coordination struggle
+        or move off-chain entirely.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Without guarantees, systems like liquidations, institutional trading,
+        AI agents, and DePIN coordination become unreliable.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">
+        The Insight Behind Raiku
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Blockspace is a scarce resource, but today it is treated like a lottery.
+        Raiku exists to replace probabilistic execution with
+        <strong>explicit scheduling and guarantees</strong>.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Other industries solved this long ago by reserving compute,
+        bandwidth, and time slots. Blockchains need the same model.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">
+        What Raiku Changes
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Raiku replaces execution guesswork with deterministic execution.
+        Users no longer compete blindly they reserve execution explicitly.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        This transforms blockspace from a best-effort system into
+        reliable infrastructure.
+      </p>
+    </section>
+
+    <!-- Next Navigation -->
+    <div class="mt-16 flex justify-between text-sm text-zinc-400">
+      <a href="what-is-raiku.html" class="hover:text-zinc-200">
+        ← What is Raiku?
+      </a>
+      <a href="core-concepts.html" class="hover:text-zinc-200">
+        Core Concepts →
+      </a>
+    </div>
+
+  </main>
+  <footer class="border-t border-zinc-800 mt-20">
+    <div class="max-w-5xl mx-auto px-6 py-10">
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400 mb-6">
+        <a href="https://www.raiku.com/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Website
+        </a>
+        <a href="https://docs.raiku.xyz" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Docs
+        </a>
+        <a href="https://x.com/raikucom" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          X (Twitter)
+        </a>
+        <a href="https://raiku.com/brand-assets" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Brand Assets
+        </a>
+        <a href="https://www.linkedin.com/company/raikucom/" target="_blank"
+          class="hover:text-[#C0FF38] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="text-center text-sm text-zinc-400">
+        Developed by
+        <a href="https://x.com/01Rajpurohit" target="_blank" class="hover:text-[#C0FF38] transition-colors font-medium">
+          Shubh
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>What is Raiku? | Raiku Handbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-mono text-zinc-100 min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('bg.png');">
+
+
+  <!-- Top Navigation -->
+  <header class="border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="text-sm text-zinc-400 hover:text-zinc-200">
+        ← Back to Handbook
+      </a>
+      <span class="text-sm text-zinc-500">Raiku Handbook</span>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-14">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">
+      What is Raiku?
+    </h1>
+
+    <p class="text-zinc-400 text-lg mb-10 max-w-3xl">
+      Raiku is an execution layer that makes transaction execution on Solana
+      predictable by turning blockspace into a schedulable, market-priced resource.
+    </p>
+
+    <!-- Section -->
+    <section class="mb-12">
+
+      <strong>Raiku</strong> Over the last few years, Solana has become one of the fastest and most scalable blockchains
+      in the world. Its speed has attracted developers, startups, enterprises, and institutions alike giving rise to the
+      phrase:
+      “Only possible on Solana.”
+      <br></br>
+      But as Solana usage has grown, one challenge has become clear:
+      speed alone is not enough.
+
+      When demand spikes, transactions can fail, arrive late, or execute inconsistently. For applications that depend on
+      precision, scale, and reliability, this is a serious limitation.
+
+      This is where Raiku comes in.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        In simple terms, Raiku turns blockspace into something you can
+        <strong>reserve, schedule, and rely on</strong>.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h3 class="text-xl font-semibold mb-3">Solana as a super-fast highway.</h3>
+      <ul class="list-disc list-inside space-y-2 text-sm md:text-base leading-relaxed">
+        <li>When traffic is light → everything moves smoothly</li>
+        <li>When traffic spikes → cars slow down, pile up, or miss exits</li>
+      </ul><br>
+      <p class="text-xl font-semibold mb-3">Today, applications on Solana:</p>
+      <ul class="list-disc list-inside space-y-2 text-sm md:text-base leading-relaxed">
+        <li>Can’t always guarantee their transactions will land</li>
+        <li>Struggle during congestion</li>
+        <li>Are forced to add workarounds instead of relying on the network</li>
+      </ul>
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        This creates a probabilistic system where users can pay more but still
+        have no guarantee their transaction will execute. Without reliable execution, blockchains cannot power
+        global-scale products.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">What Makes Raiku Different</h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Raiku introduces <strong>deterministic execution</strong>.
+        That means execution timing and inclusion are known in advance,
+        not guessed through fees.
+      </p>
+
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Traditional Execution</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Fee guessing</li>
+            <li>• Spam-heavy</li>
+            <li>• No guarantees</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Raiku Execution</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Scheduled execution</li>
+            <li>• Market-priced blockspace</li>
+            <li>• Guaranteed inclusion</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">Why This Matters for Real Businesses</h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Modern applications especially financial ones need more than just speed. High-frequency trading firms require
+        transaction confirmations in under 30 milliseconds, not the ~400ms seen today. Institutions need deterministic
+        transaction ordering, and enterprises require regulatory and operational certainty before moving fully on-chain.
+        Without these guarantees, large-scale businesses cannot reliably operate on blockchain infrastructure. Raiku
+        provides the missing coordination layer that makes these demanding use cases possible on Solana.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">Raiku: Solana’s Coordination Layer</h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Raiku is not a new blockchain and not a Layer 2. Instead, it acts as a coordination layer between Solana’s
+        validator network, application execution environments, and builders and institutions. This allows applications
+        to use specialized execution logic without changing Solana’s core consensus. Think of Raiku as traffic control
+        for Solana’s execution layer, ensuring transactions are scheduled, coordinated, and executed reliably even under
+        heavy load.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Raiku is like reserved bandwidth; you pay for a guaranteed execution
+        window and the system delivers exactly that.
+      </p>
+    </section>
+    <!-- Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">What Raiku is (and isn’t)</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2 text-green-400">Raiku Is</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• An execution coordination layer</li>
+            <li>• A blockspace marketplace</li>
+            <li>• Built to work with Solana</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2 text-red-400">Raiku Is Not</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• A Layer 2</li>
+            <li>• A new blockchain</li>
+            <li>• A validator replacement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Navigation -->
+    <div class="mt-16 flex justify-between text-sm text-zinc-400">
+      <span></span>
+      <a href="why-raiku.html" class="hover:text-zinc-200">
+        Why Raiku Exists →
+      </a>
+    </div>
+
+  </main>
+  <footer class="border-t border-zinc-800 mt-2">
+    <div class="max-w-5xl mx-auto px-6 py-5">
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400 mb-6">
+        <a href="https://www.raiku.com/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Website
+        </a>
+        <a href="https://docs.raiku.xyz" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Docs
+        </a>
+        <a href="https://x.com/raikucom" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          X (Twitter)
+        </a>
+        <a href="https://raiku.com/brand-assets" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Brand Assets
+        </a>
+        <a href="https://www.linkedin.com/company/raikucom/" target="_blank"
+          class="hover:text-[#C0FF38] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="text-center text-sm text-zinc-400">
+        Developed by
+        <a href="https://x.com/01Rajpurohit" target="_blank" class="hover:text-[#C0FF38] transition-colors font-medium">
+          Shubh
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>

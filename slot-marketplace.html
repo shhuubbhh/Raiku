@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Slot Marketplace & siQoS | Raiku Handbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-mono text-zinc-100 min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('bg.png');">
+
+
+  <!-- Top Navigation -->
+  <header class="border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="text-sm text-zinc-400 hover:text-zinc-200">
+        ← Back to Handbook
+      </a>
+      <span class="text-sm text-zinc-500">Raiku Handbook</span>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-14">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">
+      Slot Marketplace & siQoS
+    </h1>
+
+    <p class="text-zinc-400 text-lg mb-10 max-w-3xl">
+      The Slot Marketplace is the core mechanism that allows Raiku to turn
+      blockspace into a market-priced, schedulable resource with execution guarantees.
+    </p>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        What Is the Slot Marketplace?
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        A slot is a fixed execution window on Solana. Each slot has limited
+        capacity and cannot include every transaction during periods of high demand.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        The Slot Marketplace is Raiku’s system for allocating this limited
+        capacity through explicit markets instead of fee guessing or spam.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        From Fee Guessing to Market Pricing
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mt-6">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Without Raiku</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Guess priority fees</li>
+            <li>• Spam transactions</li>
+            <li>• Hope for inclusion</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">With Raiku</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• State execution intent</li>
+            <li>• Participate in auctions</li>
+            <li>• Receive guarantees</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        What Is siQoS?
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        siQoS stands for <strong>Slot Inclusion Quality of Service</strong>.
+        It is Raiku’s execution guarantee.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        siQoS ensures that a transaction will be included in a specific slot
+        under agreed economic conditions.
+      </p>
+
+      <div class="mt-6 p-5 rounded-xl bg-zinc-900 border border-zinc-800 max-w-3xl">
+        <p class="text-sm text-zinc-400">
+          <strong>Important:</strong> siQoS is not a priority fee.
+          It is a contractual execution commitment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        siQoS vs Priority Fees
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mt-6">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Priority Fees</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Probabilistic inclusion</li>
+            <li>• No guarantees</li>
+            <li>• Spam-friendly</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">siQoS</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Guaranteed inclusion</li>
+            <li>• Deterministic execution</li>
+            <li>• Market-backed commitments</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        JIT & AOT Auctions in the Marketplace
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        The Slot Marketplace supports two types of demand:
+        immediate execution and future scheduling.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mt-6">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">JIT Auctions</h3>
+          <p class="text-sm text-zinc-400">
+            Sealed-bid auctions used for latency-critical execution
+            in the next available slot.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">AOT Auctions</h3>
+          <p class="text-sm text-zinc-400">
+            English auctions used to reserve blockspace
+            in future slots with predictable pricing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        Why This Reduces Spam & MEV Waste
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        By requiring economic commitments, the Slot Marketplace
+        discourages spam and reduces wasted MEV.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Only transactions that truly value execution participate,
+        improving efficiency for the entire network.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        Why the Slot Marketplace Matters
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        The Slot Marketplace transforms Solana from a best-effort
+        execution environment into reliable infrastructure.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        This reliability is what enables institutional finance,
+        autonomous systems, and advanced on-chain applications.
+      </p>
+    </section>
+
+    <!-- Next Navigation -->
+    <div class="mt-16 flex justify-between text-sm text-zinc-400">
+      <a href="jit-vs-aot.html" class="hover:text-zinc-200">
+        ← JIT vs AOT
+      </a>
+      <a href="products.html" class="hover:text-zinc-200">
+        Products Built on Raiku →
+      </a>
+    </div>
+
+  </main>
+  <footer class="border-t border-zinc-800 mt-2">
+    <div class="max-w-5xl mx-auto px-6 py-5">
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400 mb-6">
+        <a href="https://www.raiku.com/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Website
+        </a>
+        <a href="https://docs.raiku.xyz" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Docs
+        </a>
+        <a href="https://x.com/raikucom" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          X (Twitter)
+        </a>
+        <a href="https://raiku.com/brand-assets" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Brand Assets
+        </a>
+        <a href="https://www.linkedin.com/company/raikucom/" target="_blank"
+          class="hover:text-[#C0FF38] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="text-center text-sm text-zinc-400">
+        Developed by
+        <a href="https://x.com/01Rajpurohit" target="_blank" class="hover:text-[#C0FF38] transition-colors font-medium">
+          Shubh
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>

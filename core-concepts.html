@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Core Concepts | Raiku Handbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-mono text-zinc-100 min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('bg.png');">
+
+
+  <!-- Top Navigation -->
+  <header class="border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="text-sm text-zinc-400 hover:text-zinc-200">
+        ← Back to Handbook
+      </a>
+      <span class="text-sm text-zinc-500">Raiku Handbook</span>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-14">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">
+      Core Concepts
+    </h1>
+
+    <p class="text-zinc-400 text-lg mb-10 max-w-3xl">
+      This page introduces the key ideas behind Raiku.
+      Understanding these concepts will make everything else in the Academy intuitive.
+    </p>
+
+    <!-- Concept 1 -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        1. Deterministic Execution
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Deterministic execution means that a transaction’s inclusion and timing
+        are known in advance.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Instead of sending a transaction and hoping it executes, users can rely
+        on explicit guarantees about when execution will occur.
+      </p>
+
+      <div class="mt-6 p-5 rounded-xl bg-zinc-900 border border-zinc-800 max-w-3xl">
+        <p class="text-sm text-zinc-400">
+          <strong>Key idea:</strong> Execution becomes something you can depend on,
+          not something you gamble for.
+        </p>
+      </div>
+    </section>
+
+    <!-- Concept 2 -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        2. Blockspace as a Market
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Blockspace is limited execution capacity. When demand exceeds supply,
+        it must be allocated somehow.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Today, blockspace is allocated through fee guessing and spam.
+        Raiku treats blockspace as a market where users explicitly pay
+        for execution guarantees.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mt-6">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Before</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Fee guessing</li>
+            <li>• Spam-driven inclusion</li>
+            <li>• No guarantees</li>
+          </ul>
+        </div>
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">With Raiku</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Explicit pricing</li>
+            <li>• Market allocation</li>
+            <li>• Guaranteed execution</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concept 3 -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        3. Execution vs Consensus
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Consensus decides what the network agrees on.
+        Execution decides how and when transactions are run.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Raiku focuses on execution coordination without modifying consensus.
+        Validators continue to operate as usual.
+      </p>
+
+      <div class="mt-6 p-5 rounded-xl bg-zinc-900 border border-zinc-800 max-w-3xl">
+        <p class="text-sm text-zinc-400">
+          <strong>Important:</strong> Raiku does not replace validators
+          and does not change Solana’s consensus rules.
+        </p>
+      </div>
+    </section>
+
+    <!-- Concept 4 -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        4. Slot Inclusion Quality of Service (siQoS)
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        siQoS is Raiku’s execution guarantee.
+        It ensures that a transaction is included in a specific slot
+        under agreed economic terms.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Unlike priority fees, siQoS is not probabilistic.
+        It is an explicit commitment.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mt-6">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Priority Fees</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Signal only</li>
+            <li>• Probabilistic</li>
+            <li>• Spam-prone</li>
+          </ul>
+        </div>
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">siQoS</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Explicit guarantee</li>
+            <li>• Deterministic</li>
+            <li>• Market-backed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concept 5 -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        5. Scheduling vs Racing
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Traditional execution forces users to race for inclusion.
+        Raiku replaces this with scheduling.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Users choose when they want execution and pay for guarantees,
+        instead of retrying transactions endlessly.
+      </p>
+    </section>
+
+    <!-- Next Navigation -->
+    <div class="mt-16 flex justify-between text-sm text-zinc-400">
+      <a href="why-raiku.html" class="hover:text-zinc-200">
+        ← Why Raiku Exists
+      </a>
+      <a href="architecture.html" class="hover:text-zinc-200">
+        How Raiku Works →
+      </a>
+    </div>
+
+  </main>
+  <footer class="border-t border-zinc-800 mt-2">
+    <div class="max-w-5xl mx-auto px-6 py-5">
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400 mb-6">
+        <a href="https://www.raiku.com/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Website
+        </a>
+        <a href="https://docs.raiku.xyz" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Docs
+        </a>
+        <a href="https://x.com/raikucom" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          X (Twitter)
+        </a>
+        <a href="https://raiku.com/brand-assets" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Brand Assets
+        </a>
+        <a href="https://www.linkedin.com/company/raikucom/" target="_blank"
+          class="hover:text-[#C0FF38] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="text-center text-sm text-zinc-400">
+        Developed by
+        <a href="https://x.com/01Rajpurohit" target="_blank" class="hover:text-[#C0FF38] transition-colors font-medium">
+          Shubh
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>

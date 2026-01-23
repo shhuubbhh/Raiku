@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Glossary | Raiku Handbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-mono text-zinc-100 min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('bg.png');">
+
+
+  <!-- Top Navigation -->
+  <header class="border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="text-sm text-zinc-400 hover:text-zinc-200">
+        ← Back to Handbook
+      </a>
+      <span class="text-sm text-zinc-500">Raiku Handbook</span>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-14">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">
+      Glossary
+    </h1>
+
+    <p class="text-zinc-400 text-lg mb-10 max-w-3xl">
+      This glossary defines the key terms used throughout the Raiku Academy.
+      If something feels unclear while reading other pages, start here.
+    </p>
+
+    <!-- Term -->
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Blockspace</h2>
+      <p class="text-zinc-300">
+        The limited execution capacity available in a blockchain block or slot.
+        Raiku treats blockspace as a scarce, market-priced resource.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Slot</h2>
+      <p class="text-zinc-300">
+        A fixed execution window on Solana during which transactions are processed.
+        Each slot has limited capacity.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Deterministic Execution</h2>
+      <p class="text-zinc-300">
+        Execution where transaction inclusion and timing are guaranteed in advance,
+        not determined probabilistically.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Probabilistic Execution</h2>
+      <p class="text-zinc-300">
+        A model where fees increase the chance of inclusion but do not guarantee
+        execution.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Execution Layer</h2>
+      <p class="text-zinc-300">
+        The part of the system responsible for transaction ordering, scheduling,
+        and inclusion.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Consensus</h2>
+      <p class="text-zinc-300">
+        The mechanism by which validators agree on state transitions and block order.
+        Raiku does not modify consensus.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Block Builder</h2>
+      <p class="text-zinc-300">
+        An entity responsible for constructing blocks and ordering transactions
+        under predefined rules.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Open Block Building</h2>
+      <p class="text-zinc-300">
+        A model where multiple builders compete to construct blocks while honoring
+        execution commitments.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">JIT (Just-In-Time)</h2>
+      <p class="text-zinc-300">
+        A transaction model designed for immediate execution using sealed-bid auctions.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">AOT (Ahead-Of-Time)</h2>
+      <p class="text-zinc-300">
+        A transaction model that allows execution to be scheduled in future slots
+        using auctions.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Slot Marketplace</h2>
+      <p class="text-zinc-300">
+        Raiku’s market for pricing, allocating, and guaranteeing execution
+        at the slot level.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">siQoS (Slot Inclusion Quality of Service)</h2>
+      <p class="text-zinc-300">
+        Raiku’s execution guarantee that ensures inclusion in a specific slot
+        under agreed economic terms.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Priority Fees</h2>
+      <p class="text-zinc-300">
+        Fees used on Solana today to signal transaction importance without
+        guaranteeing inclusion.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Global Accounts</h2>
+      <p class="text-zinc-300">
+        Shared coordination accounts used by Raiku to enforce execution ordering
+        and prevent conflicts.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">MEV (Maximal Extractable Value)</h2>
+      <p class="text-zinc-300">
+        Value extracted by reordering, inserting, or excluding transactions
+        during block construction.
+      </p>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Execution Guarantee</h2>
+      <p class="text-zinc-300">
+        A commitment that a transaction will execute at a specific time
+        or penalties apply.
+      </p>
+    </section>
+
+    <section class="mb-14 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-2">Scheduling vs Racing</h2>
+      <p class="text-zinc-300">
+        Racing refers to fee-based competition for inclusion.
+        Scheduling refers to reserving execution with guarantees.
+      </p>
+    </section>
+
+    <!-- Final Navigation -->
+    <div class="mt-16 flex justify-between text-sm text-zinc-400">
+      <a href="use-cases.html" class="hover:text-zinc-200">
+        ← Use Cases
+      </a>
+      <a href="index.html" class="hover:text-zinc-200">
+        Back to Handbook Home →
+      </a>
+    </div>
+  </main>
+  <footer class="border-t border-zinc-800 mt-2">
+    <div class="max-w-5xl mx-auto px-6 py-5">
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400 mb-6">
+        <a href="https://www.raiku.com/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Website
+        </a>
+        <a href="https://docs.raiku.xyz" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Docs
+        </a>
+        <a href="https://x.com/raikucom" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          X (Twitter)
+        </a>
+        <a href="https://raiku.com/brand-assets" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Brand Assets
+        </a>
+        <a href="https://www.linkedin.com/company/raikucom/" target="_blank"
+          class="hover:text-[#C0FF38] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="text-center text-sm text-zinc-400">
+        Developed by
+        <a href="https://x.com/01Rajpurohit" target="_blank" class="hover:text-[#C0FF38] transition-colors font-medium">
+          Shubh
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Raiku Handbook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body class="font-mono text-zinc-100 min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('bg.png');">
+
+
+  <!-- Header -->
+  <header class="border-b border-zinc-800 max-w-7xl py-3">
+    <div class="max-w-5xl mx-auto px-1 flex items-center justify-between">
+
+      <!-- Logo + Name -->
+      <a href="index.html" class="flex items-center gap-1 group">
+        <img src="raiku.png" alt="Raiku Logo" class="h-10 w-30" />
+      </a>
+    </div>
+  </header>
+  <div class="px-40 py-2">
+    <h1 class="text-4xl font-bold mb-3">Raiku Handbook</h1>
+    <p class="text-zinc-400 max-w-2xl">
+      Learn how deterministic execution and programmable blockspace work on Solana.
+    </p>
+  </div>
+
+  <!-- Cards Grid -->
+  <main class="max-w-7xl mx-auto px-6 pb-16 flex-grow">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-2">
+
+      <!-- Card -->
+      <a href="what-is-raiku.html"
+        class="group p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">What is Raiku?</h2>
+        <p class="text-zinc-400 text-sm">
+          A simple explanation of Raiku and why it matters.
+        </p>
+      </a>
+
+      <a href="why-raiku.html"
+        class="group p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">Why Raiku Exists
+        </h2>
+        <p class="text-zinc-400 text-sm">
+          The execution problems on Solana that Raiku solves.
+        </p>
+      </a>
+
+      <a href="core-concepts.html"
+        class="p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">Core Concepts</h2>
+        <p class="text-zinc-400 text-sm">
+          Deterministic execution, blockspace markets, siQoS.
+        </p>
+      </a>
+
+      <a href="architecture.html"
+        class="p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">How Raiku Works</h2>
+        <p class="text-zinc-400 text-sm">
+          Architecture and execution flow overview.
+        </p>
+      </a>
+
+      <a href="jit-vs-aot.html" class="p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">JIT vs AOT</h2>
+        <p class="text-zinc-400 text-sm">
+          Immediate vs scheduled execution explained.
+        </p>
+      </a>
+
+      <a href="slot-marketplace.html"
+        class="p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">Slot Marketplace
+        </h2>
+        <p class="text-zinc-400 text-sm">
+          How blockspace is priced and guaranteed.
+        </p>
+      </a>
+
+      <a href="products.html" class="p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">Products</h2>
+        <p class="text-zinc-400 text-sm">
+          Bandwidth markets, RFQs, global accounts.
+        </p>
+      </a>
+
+      <a href="use-cases.html" class="p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">Use Cases</h2>
+        <p class="text-zinc-400 text-sm">
+          Finance, AI agents, DePIN, gaming.
+        </p>
+      </a>
+
+      <a href="glossary.html" class="p-6 rounded-2xl border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 transition">
+        <h2 class="text-2xl font-semibold mb-3 hover:text-[#C0FF38] transition-colors duration-200">Glossary</h2>
+        <p class="text-zinc-400 text-sm">
+          All Raiku terms explained clearly.
+        </p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="border-t border-zinc-800 mt-2">
+    <div class="max-w-5xl mx-auto px-6 py-5">
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400 mb-6">
+        <a href="https://www.raiku.com/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Website
+        </a>
+        <a href="https://docs.raiku.xyz" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Docs
+        </a>
+        <a href="https://x.com/raikucom" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          X (Twitter)
+        </a>
+        <a href="https://raiku.com/brand-assets" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Brand Assets
+        </a>
+        <a href="https://www.linkedin.com/company/raikucom/" target="_blank"
+          class="hover:text-[#C0FF38] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+      <!-- Credit -->
+      <div class="text-center text-sm text-zinc-400">
+        Developed by
+        <a href="https://x.com/01Rajpurohit" target="_blank" class="hover:text-[#C0FF38] transition-colors font-medium">
+          Shubh
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

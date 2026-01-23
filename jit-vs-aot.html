@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JIT vs AOT Transactions | Raiku Handbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-mono text-zinc-100 min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('bg.png');">
+
+
+  <!-- Top Navigation -->
+  <header class="border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="text-sm text-zinc-400 hover:text-zinc-200">
+        ← Back to Handbook
+      </a>
+      <span class="text-sm text-zinc-500">Raiku Handbook</span>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-14">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">
+      JIT vs AOT Transactions
+    </h1>
+
+    <p class="text-zinc-400 text-lg mb-10 max-w-3xl">
+      Raiku introduces two execution models that replace fee guessing with
+      explicit guarantees: Just-In-Time (JIT) and Ahead-Of-Time (AOT) transactions.
+    </p>
+
+    <!-- TL;DR -->
+    <section class="mb-14">
+      <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800 max-w-3xl">
+        <p class="text-sm text-zinc-400">
+          JIT = Execute immediately with certainty.<br />
+          AOT = Schedule execution in a future slot with certainty.
+        </p>
+      </div>
+    </section>
+
+    <!-- JIT -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        What Is a JIT Transaction?
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        JIT (Just-In-Time) transactions are designed for situations where
+        execution must happen as soon as possible.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Instead of racing other transactions using priority fees, users bid
+        directly for immediate execution through an auction.
+      </p>
+
+      <div class="mt-6 p-5 rounded-xl bg-zinc-900 border border-zinc-800 max-w-3xl">
+        <p class="text-sm text-zinc-400">
+          <strong>Best for:</strong> Liquidations, arbitrage, high-frequency trading,
+          time-sensitive actions.
+        </p>
+      </div>
+    </section>
+
+    <!-- JIT How -->
+    <section class="mb-14">
+      <h3 class="text-xl font-semibold mb-3">
+        How JIT Works (Conceptually)
+      </h3>
+      <ol class="list-decimal list-inside text-zinc-300 space-y-2 max-w-3xl">
+        <li>User submits a JIT execution request</li>
+        <li>Raiku runs a sealed-bid auction</li>
+        <li>Highest bidder wins guaranteed inclusion</li>
+        <li>Transaction executes in the next available slot</li>
+      </ol>
+    </section>
+
+    <!-- AOT -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        What Is an AOT Transaction?
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        AOT (Ahead-Of-Time) transactions allow users to schedule execution
+        for a specific future slot.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Instead of competing in real time, users reserve blockspace in advance,
+        locking in execution certainty and predictable pricing.
+      </p>
+
+      <div class="mt-6 p-5 rounded-xl bg-zinc-900 border border-zinc-800 max-w-3xl">
+        <p class="text-sm text-zinc-400">
+          <strong>Best for:</strong> Institutional trades, RFQs, AI agents,
+          DePIN coordination, planned workflows.
+        </p>
+      </div>
+    </section>
+
+    <!-- AOT How -->
+    <section class="mb-14">
+      <h3 class="text-xl font-semibold mb-3">
+        How AOT Works (Conceptually)
+      </h3>
+      <ol class="list-decimal list-inside text-zinc-300 space-y-2 max-w-3xl">
+        <li>User selects a future slot or time window</li>
+        <li>Raiku runs an English auction</li>
+        <li>Slot is reserved for the winning bid</li>
+        <li>Transaction executes at the scheduled time</li>
+      </ol>
+    </section>
+
+    <!-- Comparison -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-4">
+        JIT vs AOT - Side by Side
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">JIT</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Immediate Execution</li>
+            <li>• Sealed-bid Auctions</li>
+            <li>• Latency Critical</li>
+            <li>• Reactive use cases</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">AOT</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Scheduled Execution</li>
+            <li>• English Auctions</li>
+            <li>• Predictable Pricing</li>
+            <li>• Planned Workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Both -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        Why Raiku Supports Both
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Real systems require both immediate reactions and long-term planning.
+        Raiku balances JIT and AOT demand by allocating blockspace dynamically
+        based on market conditions.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        This prevents spam, reduces fee wars, and ensures execution capacity
+        goes to the highest-value uses.
+      </p>
+    </section>
+
+    <!-- Next Navigation -->
+    <div class="mt-16 flex justify-between text-sm text-zinc-400">
+      <a href="architecture.html" class="hover:text-zinc-200">
+        ← How Raiku Works
+      </a>
+      <a href="slot-marketplace.html" class="hover:text-zinc-200">
+        Slot Marketplace →
+      </a>
+    </div>
+
+  </main>
+  <footer class="border-t border-zinc-800 mt-2">
+    <div class="max-w-5xl mx-auto px-6 py-5">
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400 mb-6">
+        <a href="https://www.raiku.com/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Website
+        </a>
+        <a href="https://docs.raiku.xyz" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Docs
+        </a>
+        <a href="https://x.com/raikucom" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          X (Twitter)
+        </a>
+        <a href="https://raiku.com/brand-assets/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Brand Assets
+        </a>
+        <a href="https://www.linkedin.com/company/raikucom/" target="_blank"
+          class="hover:text-[#C0FF38] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="text-center text-sm text-zinc-400">
+        Developed by
+        <a href="https://x.com/01Rajpurohit" target="_blank" class="hover:text-[#C0FF38] transition-colors font-medium">
+          Shubh
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>

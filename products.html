@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Products Built on Raiku | Raiku Handbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-mono text-zinc-100 min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('bg.png');">
+
+
+  <!-- Top Navigation -->
+  <header class="border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="text-sm text-zinc-400 hover:text-zinc-200">
+        ← Back to Handbook
+      </a>
+      <span class="text-sm text-zinc-500">Raiku Handbook</span>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-14">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">
+      Products Built on Raiku
+    </h1>
+
+    <p class="text-zinc-400 text-lg mb-10 max-w-3xl">
+      Raiku is not just a protocol upgrade but it enables a new class of products
+      built around guaranteed execution and schedulable blockspace.
+    </p>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        Bandwidth Markets
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Bandwidth markets allow applications to purchase guaranteed execution
+        capacity over time, rather than competing transaction-by-transaction.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        This gives developers predictable performance, stable costs,
+        and reliable user experience even during peak demand.
+      </p>
+
+      <div class="mt-6 p-5 rounded-xl bg-zinc-900 border border-zinc-800 max-w-3xl">
+        <p class="text-sm text-zinc-400">
+          <strong>Why it matters:</strong> Apps can scale without breaking
+          during congestion.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        Global Accounts (Product View)
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Global accounts act as shared coordination points that allow Raiku
+        to enforce execution ordering and prevent conflicts across transactions.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        As a product, global accounts enable complex workflows that require
+        deterministic ordering and coordination.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mt-6">
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">Without Global Accounts</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Conflicting execution</li>
+            <li>• Unreliable ordering</li>
+            <li>• Complex retry logic</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+          <h3 class="font-semibold mb-2">With Global Accounts</h3>
+          <ul class="text-sm text-zinc-400 space-y-1">
+            <li>• Deterministic ordering</li>
+            <li>• Conflict prevention</li>
+            <li>• Reliable workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        RFQ & Institutional Execution
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Institutional workflows require exact execution timing,
+        predictable settlement, and zero tolerance for retries.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Raiku enables on-chain RFQ (Request for Quote) execution by allowing
+        transactions to be scheduled ahead of time with guaranteed inclusion.
+      </p>
+
+      <div class="mt-6 p-5 rounded-xl bg-zinc-900 border border-zinc-800 max-w-3xl">
+        <p class="text-sm text-zinc-400">
+          <strong>Result:</strong> Institutions can deploy capital on-chain
+          with confidence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        Execution Guarantees as a Product
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Traditionally, blockchains sell access to blockspace.
+        Raiku sells execution guarantees.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        This shifts execution from a best-effort service
+        into a first-class, market-priced product.
+      </p>
+    </section>
+
+    <!-- Section -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold mb-3">
+        Why These Products Matter Together
+      </h2>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl">
+        Bandwidth markets, global accounts, and RFQ execution form a complete
+        execution stack built on deterministic guarantees.
+      </p>
+      <p class="text-zinc-300 leading-relaxed max-w-3xl mt-4">
+        Together, they transform Solana from fast infrastructure
+        into reliable infrastructure.
+      </p>
+    </section>
+
+    <!-- Next Navigation -->
+    <div class="mt-16 flex justify-between text-sm text-zinc-400">
+      <a href="slot-marketplace.html" class="hover:text-zinc-200">
+        ← Slot Marketplace
+      </a>
+      <a href="use-cases.html" class="hover:text-zinc-200">
+        Use Cases →
+      </a>
+    </div>
+
+  </main>
+  <footer class="border-t border-zinc-800 mt-2">
+    <div class="max-w-5xl mx-auto px-6 py-5">
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400 mb-6">
+        <a href="https://www.raiku.com/" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Website
+        </a>
+        <a href="https://docs.raiku.xyz" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Docs
+        </a>
+        <a href="https://x.com/raikucom" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          X (Twitter)
+        </a>
+        <a href="https://raiku.com/brand-assets" target="_blank" class="hover:text-[#C0FF38] transition-colors">
+          Brand Assets
+        </a>
+        <a href="https://www.linkedin.com/company/raikucom/" target="_blank"
+          class="hover:text-[#C0FF38] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="text-center text-sm text-zinc-400">
+        Developed by
+        <a href="https://x.com/01Rajpurohit" target="_blank" class="hover:text-[#C0FF38] transition-colors font-medium">
+          Shubh
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>
